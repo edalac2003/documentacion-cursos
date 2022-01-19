@@ -1,0 +1,47 @@
+ANGULAR UDEMY
+
+Clase 1.  Instalación del proyecto
+1. Se crea una carpeta vacia.  DEntro de esa carpeta se ejecuta el comando para instalar angular cli.  npm install -g @angular/cli
+2. Para crear un nuevo proyecto, se ejecuta:  ng new nombre_proyecto.
+3. se ingresa a la carpeta del proyecto creado y se ejeucta ng serve --o   para verificar que todo cargue bien.
+
+Clase 2.  Configuracion de Bootstrap.
+1. Instalar bootstrap.   npm install bootstrap.
+2. En la instalación se creo la carpeta bootstrap dentro de la carpeta node_modules.
+3. Configurar el archivo angular.json --> seccion architect - build - styles y adicionar "node_modules/bootstrap/dist/css/bootstrap.min.css"
+4. Se ejecuta nuevamemente ng serve --o.  El estilo de Hola mundo!!! debió cambiar.
+5. Para hacer otra prueba se puede adicionar un componente visual, tal como un boton.
+
+Clase 3. Creación de componente, modelos y servicio.
+1. Para crear un componente.  ng g c nombre_componente.
+2. Para crear un servicio. ng g s producto.
+3. Para crear el modelo.  Se realiza a mano.
+	crear archivo nombre_modelo.ts
+	Crear la estructura interna del modelo. DEfinir los atributos y crear un constructor con todos los campos.
+	
+Clase 4.  Routing.
+1.	Se configura el archivo app-routing.module.ts.  si no está creado, se crea manualmente. 
+	Se púede ejecutar el comando ng generate module app-routing --flat --module=app
+	Aqui se configuran todas la rutas del proyecto.
+	const routes: Routes = [
+		{ path: '', component: ListarProductosComponent },
+		{ path: 'crear-producto', component: CrearProductoComponent },
+		{ path: 'editar-producto/:id', component : CrearProductoComponent },
+		{ path: '**', redirectTo: '', pathMatch: 'full' }
+	];
+2.	Se debe importar en el archivo app.module.ts para que funcione correctamente.
+	import { AppRoutingModule } from './app-routing.module';
+	imports: [
+        BrowserModule, AppRoutingModule
+    ],
+
+Clase 5. Listar producto HTML.
+	OBSERVACION: Si se desea colocar un gradiente al portal, puede dirigirse a https://uigradients.com/ y seleccionar el deseado.  
+	Luego debe editar el archivo general style.css y dentro del body: {} pegar el css obtenido en la pagina de gradientes.
+
+
+Clase 6. Configuracion Google Fonts y FontAwesome.
+
+Clase 7. Crear Producto HTML.
+
+clase 8. Crear producto. Formulario reactivo.
