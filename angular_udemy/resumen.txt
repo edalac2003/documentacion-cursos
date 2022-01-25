@@ -45,3 +45,63 @@ Clase 6. Configuracion Google Fonts y FontAwesome.
 Clase 7. Crear Producto HTML.
 
 clase 8. Crear producto. Formulario reactivo.
+
+Clase 11. Creacion del Backend.  Instalación de paquetes.
+	Para tener separado el front del backend, se crea una carpeta llamada [servidor].
+	Ubicarse dentro de la carpeta y ejecutar el comando npm init.
+	PREGUNTAS: nombre_servidor, version, descripcion, author y yes.
+	Instalar dependencias.
+		npm install -D nodemon
+		npm install express mongoose dotenv
+		
+	En el archivo package.json se puede visualizar la configuración realizada con la ejecución de npm init.
+		
+CLase 12. Configuracion nodemon.
+	crear archivo index.js en la raiz de la carpeta servidor.
+	Se crea const app = express();
+	
+	Se configura el archivo package.json, en la sección scripts se elimina lo que hay y se coloca "dev": "nodemon ."
+	Esto se usa para que nodemon se ejecute cuando se arranque el servidor.
+	Se ejecuta el comando npm run dev   Para arrancar el servidor.
+	
+	Para verificar que está escuchando correctamente se puede abrir en un navegador la url localhost:4000.
+	Para verificar el uso de un consumo, se puede crear un servicio básico para que responda a las peticiones genéricas:
+		app.get('/', (req, res) => {
+			res.send('Hola Mundo!!')
+		});
+	
+Clase 13.  Configurando el servidor.
+
+Clase 14. Configurando MongoDB Atlas y Mongo Compass.
+	Ingresando a la página de Mongo.
+	Registrarse, acceder, crear BD, Crear usuario(s).
+	Descargar compass para conectarse a través del SO.
+	
+Clase 15. Conexion a BD.
+	
+clase 16. Configuracion de Routes.
+	Crear carpeta routes.
+	crear archivos productos.js
+	
+	
+clase 17. Controlador Producto.
+	
+	
+clase 18. Enviamos datos a la API.
+	Usando Postman, se hace la petición al servicio enviando datos a través del body, seleccionando raw y formato JSON.
+	{
+		"producto": "Coca Cola",
+		"categoria": "Bebidas",
+		"ubicacion": "Madrid",
+		"precio": 12345
+	}
+	AL recibir los datos estos no llegaran formateados por lo que se obtendrá como respuesta, un undefined.
+	Para solucionar este inconveniente, debe adicionar app.use(express.json()) en el archivo index.js.
+	
+Clase 19. Definición del modelo con mongoose.
+	
+	
+
+
+	
+	
